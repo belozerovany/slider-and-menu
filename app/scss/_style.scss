@@ -1,0 +1,115 @@
+@font-face {
+	font-family: 'PTSans-Regular';
+	src: url('../fonts/PTSans-Regular.eot');
+	src: url('../fonts/PTSans-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/PTSans-Regular.woff') format('woff'),
+		url('../fonts/PTSans-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'PTSans-Bold';
+	src: url('../fonts/PTSans-Bold.eot');
+	src: url('../fonts/PTSans-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/PTSans-Bold.woff') format('woff'),
+		url('../fonts/PTSans-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	font-family: 'PTSans-Regular';
+	font-size: 15px;
+}
+/* -------------base-style------------- */
+
+.clearfix:after {
+	content: '';
+	display: table;
+	width: 100%;
+	clear: both;
+}
+.float-left {
+	float: left;
+}
+.float-right {
+	float: right;
+}
+.container{
+	max-width: 1244px;
+	margin: 0 auto;
+}
+
+
+$color-white: #fff;
+$color-grey: #b9b8bd;
+$color-grey-dbdb: #dbdbdc;
+$color-grey-fof1: #f0f1f6;
+$color-grey-6: #666666;
+$color-lite-grey: #666666;
+$color-lite-blue: #2b3056;
+$color-blue: #252a54;
+$color-brown: #cb944c;
+$color-black: #181818;
+$color-black-00: #000;
+$color-blue-3ed2: #3eade2;
+$font-PTSansBold:'PTSans-Bold';
+$font-PTSans:'PTSans-Regular';
+
+@mixin border-radius($radius) { 
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	border-radius: $radius;
+}
+
+@mixin placeholder {
+	&::-webkit-input-placeholder { @content; }
+	&:-moz-placeholder  { @content; }
+	&::-moz-placeholder { @content; } 
+	&:-ms-input-placeholder { @content; } 
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+	@if $inset {
+	-webkit-box-shadow:inset $left $top $blur $color;
+	-moz-box-shadow:inset $left $top $blur $color;
+	box-shadow:inset $left $top $blur $color;
+	} @else {
+	-webkit-box-shadow: $left $top $blur $color;
+	-moz-box-shadow: $left $top $blur $color;
+	box-shadow: $left $top $blur $color;
+	}
+}
+/* -------------/base-style------------- */
+.first-letter, .section{
+	color: $color-black;
+	font-family: $font-PTSansBold;
+	font-size: 12px;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 10px 12px;
+	display: block;
+	cursor: pointer;
+	&:hover{
+		color: $color-blue-3ed2;
+	}
+} 
+.section{
+	color: $color-brown;
+}
+.block{
+	display: block;
+}
